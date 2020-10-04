@@ -1,44 +1,102 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Button,Input,Select} from "antd"
+import Filter from "./Filter"
 
-function App() {
-  return (
-  <>
-<form className="form">
+export default function  App (){
 
-  <div className="inputGroup">
-    <input id="option1" name="option1" type="checkbox"/>
-    <label for="option1">Option One</label>
-  </div>
-  
-  <div className="inputGroup">
-    <input id="option2" name="option2" type="checkbox"/>
-    <label for="option2">Option Two</label>
-  </div>
-  
-  <div className="inputGroup">
-    <input id="option2" name="option2" type="checkbox"/>
-    <label for="option2">Option Two</label>
-  </div>
-  <div className="inputGroup">
-    <input id="option2" name="option2" type="checkbox"/>
-    <label for="option2">Option Two</label>
-  </div>
-  <div className="inputGroup">
-    <input id="option2" name="option2" type="checkbox"/>
-    <label for="option2">Option Two</label>
-  </div>
-  <div className="inputGroup">
-    <input id="option2" name="option2" type="checkbox"/>
-    <label for="option2">Option Two</label>
-  </div>
 
-  <button>پاک کردن</button>
-  <button>اعمال</button>
-  
-</form>
-<style jsx>{`
+
+
+        return (
+            <>
+                <div className="propertyOne">
+                    <div className="propertySize">
+                        <form className="form">
+
+                            <div   >
+                                <div className="inputGroup">
+                                    <input className="input-options" id="option" name="option1" type="checkbox"/>
+                                    <label className="dateTimes" id="option1" for="یک روز قبل">یک روز قبل</label>
+                                </div>
+
+                                <div className="inputGroup">
+                                    <input className="input-options" id="option" name="option2" type="checkbox"/>
+                                    <label className="dateTimes" id="option2" for="یک هفته اخیر">یک هفته اخیر</label>
+                                </div>
+
+                                <div className="inputGroup">
+                                    <input className="input-options" id="option" name="option3" type="checkbox"/>
+                                    <label className="dateTimes" id="option3" for="یک ماه اخیر">یک ماه اخیر</label>
+                                </div>
+                                <div className="inputGroup">
+                                    <input className="input-options" id="option" name="option4" type="checkbox"/>
+                                    <label className="dateTimes" id="option4" for="همه زمان ها">همه زمان ها</label>
+                                </div>
+
+
+                                <Button className="buttonOneButton">پاک کردن</Button>
+
+                                <Button className="buttonTwoButton">اعمال</Button>
+
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <Filter/>
+                <style jsx>{`
+
+.buttonOneButton{
+background-color: red;
+padding:10px;
+  width: 89px;
+
+  height: 41px;
+
+  border-radius: 10px;
+color:#fff;
+font-size:.9rem;
+cursor: pointer;
+
+}
+.buttonOneButton:hover{
+background-color:#000;
+   transition-delay: 1s;
+  transition-duration: 1s;
+}
+.buttonTwoButton{
+background-color: red;
+padding:10px;
+  width: 89px;
+
+  height: 41px;
+cursor: pointer;
+  border-radius: 10px;
+color:#fff;
+font-size:.9rem;
+position:relative;
+left:10px;
+}
+.buttonTwoButton:hover{
+background-color:#000;
+transition-delay: 1s;
+  transition-duration: 1s;
+}
+.propertySize{
+width: 292px;
+height: 259px;
+}
+.propertyOne{
+display:flex;align-items:center;justify-content:center;
+}
+.dateTimes{
+position:relative; left:160px
+}
+.input-options{
+position:relative;
+left:250px;
+}
 .inputGroup {
   background-color: #fff;
   display: block;
@@ -130,30 +188,12 @@ font-size: 18px;
 font-weight: 600;
 line-height: 36px;
 }
-
 body {
-background-color: #D1D7DC;
 font-family: 'Fira Sans', sans-serif;
 }
-
-*,
-*::before,
-*::after {
-box-sizing: inherit;
-}
-
-html {
-box-sizing: border-box;
-}
-
-code {
-background-color: #9AA3AC;
-padding: 0 8px;
-}
 `}</style>
+            </>
+        );
 
-</>    
-  );
 }
 
-export default App;
